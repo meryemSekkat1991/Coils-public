@@ -1,4 +1,6 @@
-module.exports = {
+import { Config } from "@jest/types";
+
+const config: Config.InitialOptions = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
     '^~/(.*)$': '<rootDir>/$1',
@@ -11,7 +13,7 @@ module.exports = {
     'json'
   ],
   transform: {
-    "^.+\\.ts$": "ts-jest",
+    '^.+\\.ts$': 'ts-jest',
     '^.+\\.js$': 'babel-jest',
     '.*\\.(vue)$': 'vue-jest'
   },
@@ -22,3 +24,5 @@ module.exports = {
   ],
   testEnvironment: 'jsdom'
 }
+
+export default config;
