@@ -12,7 +12,6 @@
     "test": "jest"
   },
   "dependencies": {
-    "@pre-history/quasarbasenuxt": "^0.2.2",
     "core-js": "^3.15.1",
     "jest": "^27.1.1",
     "nuxt": "^2.15.7",
