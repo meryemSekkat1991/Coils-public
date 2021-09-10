@@ -13,6 +13,8 @@
     "lint": "eslint --ext \".ts,.vue\" --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/eslint-parser": "^7.15.4",
     "@fortawesome/pro-light-svg-icons": "^5.15.4",
     "@nuxtjs/fontawesome": "^1.1.2",
     "@pre-history/eslint-config": "^0.0.4",
