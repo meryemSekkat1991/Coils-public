@@ -17,7 +17,12 @@ export default nuxtConfig({
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
 
-  plugins: [
+  axios: {
+    proxy: true,
+  },
+
+  modules: [
+    "@nuxtjs/axios",
   ],
 
   components: [
