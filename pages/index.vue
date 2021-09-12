@@ -32,7 +32,10 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { Vue, Component } from "nuxt-property-decorator";
 
-export default Vue.extend({})
+@Component({
+  name: "home"
+})
+export default class QsAlert extends Vue {}
 </script>

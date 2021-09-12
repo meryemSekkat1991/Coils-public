@@ -1,3 +1,7 @@
 module.exports = {
-  parser: "@babel/eslint-parser",
+  root: true,
+  extends: ["@pre-history"],
+  plugins: [],
+  // add your custom rules here
+  rules: {},
 };

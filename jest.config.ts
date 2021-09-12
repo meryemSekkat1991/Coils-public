@@ -2,27 +2,27 @@ import type { Config } from "@jest/types";
 
 const config: Config.InitialOptions = {
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/$1',
-    '^~/(.*)$': '<rootDir>/$1',
-    '^vue$': 'vue/dist/vue.common.js'
+    "^@/(.*)$": "<rootDir>/$1",
+    "^~/(.*)$": "<rootDir>/$1",
+    "^vue$": "vue/dist/vue.common.js"
   },
   moduleFileExtensions: [
-    'ts',
-    'js',
-    'vue',
-    'json'
+    "ts",
+    "js",
+    "vue",
+    "json"
   ],
   transform: {
-    '^.+\\.ts$': 'ts-jest',
-    '^.+\\.js$': 'babel-jest',
-    '.*\\.(vue)$': 'vue-jest'
+    "^.+\\.ts$": "ts-jest",
+    "^.+\\.js$": "babel-jest",
+    ".*\\.(vue)$": "vue-jest"
   },
   collectCoverage: true,
   collectCoverageFrom: [
-    '<rootDir>/components/**/*.vue',
-    '<rootDir>/pages/**/*.vue'
+    "<rootDir>/components/**/*.vue",
+    "<rootDir>/pages/**/*.vue"
   ],
-  testEnvironment: 'jsdom'
-}
+  testEnvironment: "jsdom"
+};
 
 export default config;
