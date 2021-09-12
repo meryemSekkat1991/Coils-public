@@ -38,5 +38,5 @@ import { Vue, Component } from "nuxt-property-decorator";
 @Component({
   name: "home"
 })
-export default class QsAlert extends Vue {}
+export default class Home extends Vue {}
 </script>
