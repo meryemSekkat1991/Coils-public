@@ -18,7 +18,7 @@ export default nuxtConfig({
   },
 
   axios: {
-    proxy: true,
+    baseURL: 'http://173.212.223.175:3000',
   },
 
   modules: [
