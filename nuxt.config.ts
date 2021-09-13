@@ -17,6 +17,11 @@ export default nuxtConfig({
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
 
+  loading: {
+    color: 'blue',
+    height: '5px'
+  },
+
   axios: {
     baseURL: 'http://173.212.223.175:3000',
   },
