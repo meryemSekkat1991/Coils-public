@@ -38,6 +38,9 @@ export default nuxtConfig({
           logout: { url: "/api/admin/auto-logout", method: "delete" },
           user: { url: "/api/admin/me", method: "get" },
         },
+        watchLoggedIn: true,
+        rewriteRedirects: true,
+        resetOnError: true
       },
     },
   },
