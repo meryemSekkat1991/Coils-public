@@ -36,7 +36,17 @@
 import { Vue, Component } from "nuxt-property-decorator";
 
 @Component({
+  auth: 'guest',
   name: "home"
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+  warehouses = [];
+  mounted () {
+    this.$axios
+      .get('/api/admin/warehouses')
+      .then(res => (
+        this.warehouses = res.data
+      ));
+  }
+}
 </script>

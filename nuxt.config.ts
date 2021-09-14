@@ -17,9 +17,32 @@ export default nuxtConfig({
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
 
-  loading: {
-    color: 'blue',
-    height: '5px'
+  auth: {
+    redirect: {
+      login: "/login",
+      logout: "/login",
+      callback: "/login",
+      home: "/",
+    },
+    strategies: {
+      local: {
+        token: {
+          property: "token",
+        },
+        user: {
+          property: "user",
+          autoFetch: true,
+        },
+        endpoints: {
+          login: { url: "/api/admin/auto-login", method: "post" },
+          logout: { url: "/api/admin/auto-logout", method: "delete" },
+          user: { url: "/api/admin/me", method: "get" },
+        },
+        watchLoggedIn: true,
+        rewriteRedirects: true,
+        resetOnError: true
+      },
+    },
   },
 
   axios: {
@@ -28,11 +51,21 @@ export default nuxtConfig({
 
   modules: [
     "@nuxtjs/axios",
+    "@nuxtjs/auth-next",
   ],
+
+  router: {
+    middleware: ["auth"],
+    routeNameSplitter: "_",
+  },
 
   components: [
     { path: "~node_modules/@pre-history/quasarbasenuxt/components", level: 0 },
     { path: "~/components", level: 1 },
+  ],
+
+  plugins: [
+    { src: '~/plugins/vee-validate', mode: 'client' },
   ],
 
 });
