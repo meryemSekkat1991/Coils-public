@@ -28,6 +28,7 @@ import { ValidationObserver, ValidationProvider } from 'vee-validate'
 
 @Component({
   auth: 'guest',
+  layout: 'empty',
   components: {
     ValidationObserver, ValidationProvider
   }
