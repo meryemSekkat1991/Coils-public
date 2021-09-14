@@ -1,21 +1,25 @@
 <template lang="pug" >
 .login
-  .div(class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100")
-    .card-body
-      ValidationObserver( v-slot="{ handleSubmit }" tag="div")
-        form(@submit.prevent="handleSubmit(login)")
-          ValidationProvider.mb-4(tag="div" rules="required|email" name="email" v-slot="{ errors, classes }")
-            .form-control
-              label(for='inputEmailAddress') Email Address
-              input#inputEmailAddress.input(type='email' :class="classes" v-model="form.email" placeholder='Email Address' autocomplete="email" name="email")
-              .validation-error {{ errors[0] }}
-          ValidationProvider.mb-4(tag="div" rules="required" name="password" v-slot="{ errors, classes }")
-            .form-control
-              label(for='inputChoosePassword') Enter Password
-              input#inputChoosePassword.input(type='password', v-model="form.password" placeholder='Enter Password' :class="classes" autocomplete="current-password" minlength='6', maxlength='64')
-              .validation-error {{ errors[0] }}
-          .flex.w-full.justify-end
-            button(type="submit") Sign in
+  .hero.min-h-screen.text-neutral-content.bg-gradient-to-r.from-black.via-yellow-800.to-black
+    .flex-col.justify-center.hero-content.w-full(class="md:w-4/6")
+      .text-center(class='lg:text-left')
+        h1.mb-14.text-3xl.font-bold.max-w-lg.text-center(class="md:text-5xl") Sign to coils Admin Side
+      .card.flex-shrink-0.w-full.min-w-sm.shadow-2xl.bg-base-100
+        ValidationObserver( v-slot="{ handleSubmit }" tag="div")
+          form(@submit.prevent="handleSubmit(login)")
+            .card-body
+              .form-control
+                label.label
+                  span.label-text Email
+                input.input.input-bordered( v-model="form.email" placeholder='Email Address')
+              .form-control
+                label.label
+                  span.label-text Password
+                input.input.input-bordered(type='password', v-model="form.password" placeholder='Enter Password' autocomplete="current-password" minlength='6', maxlength='64')
+                label.label
+                  a.label-text-alt.link.link-hover(href='#') Forgot password?
+              .form-control.mt-6
+                button.btn.btn-primary(type='submit') Sign in
 </template>
 
 <script lang="ts">
