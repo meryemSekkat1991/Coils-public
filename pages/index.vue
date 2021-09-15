@@ -11,13 +11,5 @@ import { Vue, Component } from "nuxt-property-decorator";
   layout: "default",
 })
 export default class Home extends Vue {
-  warehouses = [];
-  mounted () {
-    this.$axios
-      .get('/api/admin/warehouses')
-      .then(res => (
-        this.warehouses = res.data
-      ));
-  }
 }
 </script>

@@ -35,7 +35,7 @@ export default nuxtConfig({
         },
         endpoints: {
           login: { url: "/api/admin/auto-login", method: "post" },
-          logout: { url: "/api/admin/auto-logout", method: "delete" },
+          logout: { url: "/api/api/admin/logout", method: "delete" },
           user: { url: "/api/admin/me", method: "get" },
         },
         watchLoggedIn: true,

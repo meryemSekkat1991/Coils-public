@@ -1,22 +1,7 @@
 <template lang="pug">
-footer.p-10.footer.bg-neutral.text-neutral-content
+footer.p-4.footer.text-base-content.footer-center(class="bg-gradient-to-b from-yellow-500 via-yellow-300 to-yellow-200")
   div
-    span.footer-title Services
-    a.link.link-hover Branding
-    a.link.link-hover Design
-    a.link.link-hover Marketing
-    a.link.link-hover Advertisement
-  div
-    span.footer-title Company
-    a.link.link-hover About us
-    a.link.link-hover Contact
-    a.link.link-hover Jobs
-    a.link.link-hover Press kit
-  div
-    span.footer-title Legal
-    a.link.link-hover Terms of use
-    a.link.link-hover Privacy policy
-    a.link.link-hover Cookie policy
+    p Copyright &copy; 2021 - All right reserved by ACME Industries Ltd
 </template>
 
 <script lang="ts">
@@ -27,7 +12,3 @@ import { Component, Vue } from "nuxt-property-decorator";
 })
 export default class Footer extends Vue {}
 </script>
-
-<style scoped>
-
-</style>

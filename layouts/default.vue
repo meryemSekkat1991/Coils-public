@@ -1,18 +1,10 @@
 <template lang="pug">
-#app-container.h-full
-  .page-content.h-screen
+.drawer
+  input#drawer.drawer-toggle(type='checkbox')
+  .drawer-content.overflow-hidden.min-h-screen.bg-yellow-50
+    Navbar
     client-only
-      Navbar
-      Nuxt
+      Nuxt.container.mx-auto.py-10.px-4
+  MobileMenu
   Footer
 </template>
-
-<script>
-export default {
-  name: "default"
-}
-</script>
-
-<style lang="scss">
-
-</style>
