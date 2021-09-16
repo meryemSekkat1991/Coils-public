@@ -1,5 +1,5 @@
 <template lang="pug">
-div(class="navbar mb-2 shadow-lg bg-gradient-to-b from-yellow-500 via-yellow-300 to-yellow-500")
+div(class="navbar mb-2 shadow-lg bg-gradient-to-b from-yellow-500 via-yellow-300 to-yellow-500 text-white")
   .flex-none(class='lg:flex')
     label.btn.btn-square.btn-ghost(:for='id')
       svg.inline-block.w-6.h-6.stroke-current(xmlns='http://www.w3.org/2000/svg' fill='none' viewbox='0 0 24 24')
@@ -8,9 +8,10 @@ div(class="navbar mb-2 shadow-lg bg-gradient-to-b from-yellow-500 via-yellow-300
     span.text-lg.font-bold
       | Coils
   .flex-none
-    .avatar
+    .avatar.mr-2
       .rounded-full.w-10.h-10.m-1
         img(src='https://i.pravatar.cc/500?img=32')
+    button.btn.bg-yellow-300.text-white.font-bold.border-yellow-100(@click="logout" class="hover:bg-yellow-400 hover:border-yellow-100") logout
 </template>
 
 <script lang="ts">
@@ -19,5 +20,12 @@ import { Vue, Component, Prop } from "nuxt-property-decorator";
 @Component({})
 export default class Navbar extends Vue {
   @Prop({ default: 'drawer' }) id!: string;
+
+  logout() {
+    this.$auth.logout()
+      .then(() => {
+        this.$router.push("/")
+      })
+  }
 }
 </script>
