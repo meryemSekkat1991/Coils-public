@@ -1,7 +1,7 @@
 <template lang="pug">
 .drawer-side
   label.drawer-overlay(:for='sidebar')
-  ul.p-4.overflow-y-auto.menu.w-80.shadow-lg.text-white(class="bg-gradient-to-bl from-yellow-100 via-yellow-300 to-yellow-500")
+  ul.p-4.overflow-y-auto.menu.w-80.shadow-lg.text-white(class="bg-gradient-to-bl from-indigo-100 via-indigo-300 to-indigo-500")
     li(class="mb-2")
       nuxt-link(to="/") Home
     li(class="mb-2")

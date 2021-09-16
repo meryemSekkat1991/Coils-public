@@ -1,6 +1,6 @@
 <template lang="pug" >
 .login
-  .hero.min-h-screen.text-neutral-content.bg-gradient-to-r.from-black.via-yellow-800.to-black
+  .hero.min-h-screen.text-neutral-content.bg-gradient-to-r.from-black.via-indigo-800.to-black
     .flex-col.justify-center.hero-content.w-full(class="md:w-4/6")
       .text-center(class='lg:text-left')
         h1.mb-14.text-3xl.font-bold.max-w-lg.text-center(class="md:text-5xl") Sign to coils Admin Side
