@@ -1,16 +1,14 @@
 <template lang="pug">
 .warehouses
   h1.text-xl.font-bold.mb-5 Warehouses
-  WarehousesCard(v-for="warehouse in warehouses" :warehouse="warehouse")
+  WarehousesCard(v-for="warehouse in warehouses" :warehouse="warehouse" :key="warehouse.id")
 </template>
 
 <script lang="ts">
 import { Vue, Component } from "nuxt-property-decorator";
-import WarehousesCard from "../components/WarehousesCard.vue";
 
 @Component({
   name: "warehouses",
-  components: {WarehousesCard},
   layout: "default",
 })
 
