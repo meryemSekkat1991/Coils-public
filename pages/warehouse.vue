@@ -17,7 +17,7 @@ import WarehousesCard from "../components/WarehousesCard.vue";
 
 export default class home extends Vue {
   warehouses = [];
-  mounted () {
+  async fetch () {
     this.$axios
       .get('/api/admin/warehouses')
       .then(res => (
