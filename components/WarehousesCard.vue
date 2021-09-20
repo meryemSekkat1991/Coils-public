@@ -30,9 +30,11 @@ export default class warehousesCard extends Vue {
   save(id: number): void {
     const source = this.$axios.CancelToken.source()
     this.$axios
-      .$post(
+      .$patch(
         `/api/admin/warehouses/${id}`,
-        { data: 'test' },
+        {
+          id: this.warehouse?.id,
+          name: this.warehouse?.name,},
         {
           cancelToken: source.token
         }
