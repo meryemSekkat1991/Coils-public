@@ -22,6 +22,7 @@
     "@pre-history/eslint-config": "^0.0.4",
     "core-js": "^3.15.1",
     "jest": "^27.1.1",
+    "loadash": "^1.0.0",
     "nuxt": "^2.15.7",
     "nuxt-extend": "^0.1.0",
     "nuxt-property-decorator": "^2.9.1",
