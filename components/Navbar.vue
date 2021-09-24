@@ -8,33 +8,32 @@ div(class="navbar mb-2 shadow-lg bg-gradient-to-b from-indigo-500 via-indigo-300
     span.text-lg.font-bold
       | Coils
   .user.relative(v-if="isAuth")
-    .collapse.collapse-open.relative(tabindex='0')
+    .collapse.relative(tabindex='0')
       .collapse-title.text-xs.font-medium
-        .avatar
-          .rounded-full.w-8.h-8
-            img(src='https://i.pravatar.cc/500?img=32')
+        .cover(class="flex bg-indigo-400 rounded-full w-8 h-8  items-center justify-center hover:bg-transparent")
+          Placeholder(:data="user.lastname")
       .collapse-content.fixed.top-20
-        .label {{user.login}}
-        .label {{user.lastname}}
-    .tooltip(data-tip='logout' class="tooltip-bottom tooltip-primary")
+        .label.text-sm {{user.lastname}}
+    .tooltip(data-tip='logout' class="tooltip-bottom tooltip-info")
       a.btn.btn-ghost(@click="logout") [->
 </template>
 
 <script lang="ts">
 import { Vue, Component, Prop } from "nuxt-property-decorator";
 
-@Component({})
+@Component({
+})
 export default class Navbar extends Vue {
   @Prop({ default: 'drawer' }) id!: string;
 
-  get user() {
+  get user(): Record<string, unknown> | null {
     return this.$auth.user;
   }
 
-  get isAuth() {
+  get isAuth(): boolean {
     return  this.$auth.loggedIn;
   }
-  logout() {
+  logout(): void {
     this.$auth.logout()
       .then(() => {
         this.$router.push("/")
@@ -42,3 +41,13 @@ export default class Navbar extends Vue {
   }
 }
 </script>
+<style lang="scss">
+.collapse {
+  .collapse-title {
+    @apply p-0 w-12 h-12 flex items-center justify-center;
+  }
+  .collapse-content {
+    @apply pb-0;
+  }
+}
+</style>
