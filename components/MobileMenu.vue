@@ -1,17 +1,20 @@
 <template lang="pug">
 .drawer-side
   label.drawer-overlay(:for='sidebar')
-  ul.p-4.overflow-y-auto.menu.w-80.shadow-lg.text-white(class="bg-gradient-to-bl from-indigo-100 via-indigo-300 to-indigo-500")
+  ul.p-4.overflow-y-auto.menu.w-80.shadow-lg.text-white(class="bg-gradient-to-bl from-indigo-800 via-indigo-700 to-indigo-800")
+    span.text-lg.font-bold.flex.mb-4
+      img.ml-1.w-12.h-6(src="https://i.ibb.co/m6QgTtM/logo-coils.png")
+      span.ml-2 Coils
     li(class="mb-2")
       nuxt-link(to="/") Home
     li(class="mb-2")
       nuxt-link(to="/warehouse") Warehouses
     li(class="mb-2")
-      nuxt-link(to="/products") Products
+      nuxt-link(to="/") Products
     li(class="mb-2")
-      nuxt-link(to="/services") Services
+      nuxt-link(to="/") Services
     li(class="mb-2")
-      nuxt-link(to="/profiles") Profiles
+      nuxt-link(to="/") Profiles
 </template>
 
 <script lang="ts">

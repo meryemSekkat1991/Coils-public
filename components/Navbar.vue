@@ -5,8 +5,9 @@ div(class="navbar mb-2 shadow-lg bg-gradient-to-b from-indigo-500 via-indigo-300
       svg.inline-block.w-6.h-6.stroke-current(xmlns='http://www.w3.org/2000/svg' fill='none' viewbox='0 0 24 24')
         path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16')
   .flex-1.px-2.mx-2(class='lg:flex')
-    span.text-lg.font-bold
-      | Coils
+    span.text-lg.font-bold.flex
+      img.ml-1.w-12.h-6(src="https://i.ibb.co/m6QgTtM/logo-coils.png")
+      span.ml-2 Coils
   .user.relative(v-if="isAuth")
     .collapse.relative(tabindex='0')
       .collapse-title.text-xs.font-medium
