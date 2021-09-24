@@ -52,7 +52,27 @@ export default nuxtConfig({
   modules: [
     "@nuxtjs/axios",
     "@nuxtjs/auth-next",
+    "nuxt-i18n",
   ],
+
+  i18n: {
+    locales: ['en', 'fr', 'es'],
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages: {
+        en: {
+          welcome: 'Welcome'
+        },
+        fr: {
+          welcome: 'Bienvenue'
+        },
+        es: {
+          welcome: 'Bienvenido'
+        }
+      }
+    }
+  },
 
   router: {
     middleware: ["auth"],
@@ -66,6 +86,7 @@ export default nuxtConfig({
 
   plugins: [
     { src: '~/plugins/vee-validate', mode: 'client' },
+    { src: '~/plugins/i18n.js' }
   ],
 
 });
