@@ -52,7 +52,35 @@ export default nuxtConfig({
   modules: [
     "@nuxtjs/axios",
     "@nuxtjs/auth-next",
+    "nuxt-i18n",
   ],
+
+  i18n: {
+    locales: [
+      {
+        name: 'English',
+        code: "en",
+        iso: 'en-US',
+        file: "en/index.ts",
+      },
+      {
+        name: "french",
+        code: "fr",
+        iso: 'fra',
+        file: "fr/index.ts",
+      },
+      {
+        name: 'Italiano',
+        code: 'it',
+        iso: 'it-IT',
+        file: 'it/index.ts'
+      },
+    ],
+    strategy: "prefix_except_default",
+    langDir: "locales",
+    lazy: true,
+    defaultLocale: "it",
+  },
 
   router: {
     middleware: ["auth"],
@@ -66,6 +94,7 @@ export default nuxtConfig({
 
   plugins: [
     { src: '~/plugins/vee-validate', mode: 'client' },
+    { src: '~/plugins/i18n.js' }
   ],
 
 });
