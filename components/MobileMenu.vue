@@ -6,9 +6,9 @@
       img.ml-1.w-12.h-6(src="https://i.ibb.co/m6QgTtM/logo-coils.png")
       span.ml-2 Coils
     li(class="mb-2")
-      nuxt-link(to="/") Home
+      nuxt-link(:to="localePath('/')") {{$t('coils.home')}}
     li(class="mb-2")
-      nuxt-link(to="/warehouse") Warehouses
+      nuxt-link(:to="localePath('/warehouse')") {{$t('coils.warehouses')}}
     li(class="mb-2")
       nuxt-link(to="/") Products
     li(class="mb-2")

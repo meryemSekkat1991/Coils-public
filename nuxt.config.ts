@@ -56,22 +56,23 @@ export default nuxtConfig({
   ],
 
   i18n: {
-    locales: ['en', 'fr', 'es'],
-    defaultLocale: 'en',
-    vueI18n: {
-      fallbackLocale: 'en',
-      messages: {
-        en: {
-          welcome: 'Welcome'
-        },
-        fr: {
-          welcome: 'Bienvenue'
-        },
-        es: {
-          welcome: 'Bienvenido'
-        }
-      }
-    }
+    locales: [
+      {
+        name: 'English',
+        code: "en",
+        iso: 'en-US',
+        file: "en/index.ts",
+      },
+      {
+        name: "french",
+        code: "fr",
+        file: "fr/index.ts",
+      },
+    ],
+    strategy: "prefix_except_default",
+    langDir: "locales",
+    lazy: true,
+    defaultLocale: "fr",
   },
 
   router: {
