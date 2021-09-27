@@ -1,6 +1,6 @@
 <template lang="pug">
 .warehouses
-  h1.text-xl.font-bold.mb-5 Warehouses
+  h1.text-xl.font-bold.mb-5 {{$t('coils.warehouses')}}
   WarehousesCard(v-for="warehouse in warehouses" :warehouse="warehouse" :key="warehouse.id")
 </template>
 

@@ -66,13 +66,20 @@ export default nuxtConfig({
       {
         name: "french",
         code: "fr",
+        iso: 'fra',
         file: "fr/index.ts",
+      },
+      {
+        name: 'Italiano',
+        code: 'it',
+        iso: 'it-IT',
+        file: 'it/index.ts'
       },
     ],
     strategy: "prefix_except_default",
     langDir: "locales",
     lazy: true,
-    defaultLocale: "fr",
+    defaultLocale: "it",
   },
 
   router: {

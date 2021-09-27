@@ -7,7 +7,8 @@ div(class="navbar mb-2 shadow-lg bg-gradient-to-b from-indigo-500 via-indigo-300
   .flex-1.px-2.mx-2(class='lg:flex')
     span.text-lg.font-bold.flex
       img.ml-1.w-12.h-6(src="https://i.ibb.co/m6QgTtM/logo-coils.png")
-      span.ml-2 Coils
+      span.ml-2.uppercase {{$t('coils.coils')}}
+  LanguageSwitcher
   .user.relative(v-if="isAuth")
     .collapse.relative(tabindex='0')
       .collapse-title.text-xs.font-medium
