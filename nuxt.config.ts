@@ -79,7 +79,8 @@ export default nuxtConfig({
     strategy: "prefix_except_default",
     langDir: "locales",
     lazy: true,
-    defaultLocale: "it",
+    defaultLocale: "en",
+    vueI18nLoader: true,
   },
 
   router: {
