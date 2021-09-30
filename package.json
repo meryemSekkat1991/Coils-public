@@ -15,7 +15,6 @@
   "dependencies": {
     "@babel/core": "^7.15.5",
     "@babel/eslint-parser": "^7.15.4",
-    "nuxt-property-decorator": "^2.9.1",
     "@fortawesome/pro-light-svg-icons": "^5.15.4",
     "@nuxtjs/auth-next": "^5.0.0-1624817847.21691f1",
     "@nuxtjs/axios": "^5.13.6",
@@ -27,6 +26,7 @@
     "nuxt": "^2.15.7",
     "nuxt-extend": "^0.1.0",
     "nuxt-i18n": "^6.28.1",
+    "nuxt-property-decorator": "^2.9.1",
     "pug": "^3.0.2",
     "pug-plain-loader": "^1.1.0",
     "sass": "^1.39.2",
