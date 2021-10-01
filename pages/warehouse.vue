@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-  import {Vue, Component, Watch} from "nuxt-property-decorator";
+import {Vue, Component, Watch} from "nuxt-property-decorator";
 
 @Component({
   name: "warehouses",
