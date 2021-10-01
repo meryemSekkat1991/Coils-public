@@ -9,6 +9,8 @@
       nuxt-link(:to="localePath('/')") {{$t('coils.home')}}
     li(class="mb-2")
       nuxt-link(:to="localePath('/warehouse')") {{$t('coils.warehouses')}}
+    li(class="mb-2")
+      nuxt-link(:to="localePath('/products')") {{$t('coils.products')}}
 </template>
 
 <script lang="ts">
